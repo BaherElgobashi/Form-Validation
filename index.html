@@ -32,7 +32,12 @@
 
         <div class="input-group">
           <label for="">Phone Number</label>
-          <input type="tel" placeholder="123 456 789" />
+          <input
+            type="tel"
+            placeholder="123 456 789"
+            id="contact-phone"
+            onkeyup="validatePhone()"
+          />
           <span id="phone-error"></span>
         </div>
 

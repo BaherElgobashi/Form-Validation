@@ -19,14 +19,36 @@ function validateName() {
   } else if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
     nameError.innerHTML = "Enter , a valid Name Please";
     return false;
-  } else {
-    // nameError.innerHTML = '<i class="fas fa-check-circle"></i>';
-    nameError.innerHTML = "Great Work";
-    nameError.style.color = "green";
+  }
+  // nameError.innerHTML = '<i class="fas fa-check-circle"></i>';
+  nameError.innerHTML = "Great Work";
+  nameError.style.color = "green";
 
+  return true;
+}
+// End validateName
+
+////////////////////////////////////////////////////////////////
+
+// Start validatePhone
+function validatePhone() {
+  let phone = document.getElementById("contact-phone").value;
+  if (phone.length === 0) {
+    phoneError.innerHTML = "Phone is Required.";
+    return false;
+  } else if (phone.length !== 10) {
+    phoneError.innerHTML = "Phone should be 10 digits.";
+    return false;
+  } else if (!phone.match(/^[0-9]{10}$/)) {
+    phoneError.innerHTML = "Only Digits are allowed.";
+    return false;
+  } else {
+    phoneError.innerHTML = "Great Work";
+    phoneError.style.color = "green";
     return true;
   }
 }
-// End validateName
+
+// End validatePhone
 
 ////////////////////////////////////////////////////////////////
