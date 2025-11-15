@@ -71,3 +71,46 @@ function validateEmail() {
 }
 
 // End validateEmail
+
+////////////////////////////////////////////////////////////////
+
+// Start validateMessage
+function validateMessage() {
+  let message = document.getElementById("contact-message").value;
+  let required = 30;
+  let conc = required - message.length;
+  if (conc > 0) {
+    messageError.innerHTML = conc + "More Characters are required.";
+    return false;
+  } else {
+    messageError.innerHTML = "Great Work.";
+    messageError.style.color = "green";
+    return true;
+  }
+}
+
+// End validateMessage
+
+////////////////////////////////////////////////////////////////
+
+// Start validateForm
+
+function validateForm() {
+  if (
+    !validateName() ||
+    !validateEmail() ||
+    !validateForm() ||
+    !validatePhone() ||
+    !validateMessage()
+  ) {
+    submitError.style.display = "block";
+    submitError.innerHTML = "Please , Fix The Input Fields";
+    setTimeout(function () {
+      submitError.style.display = "none";
+    }, 3000);
+
+    return false;
+  }
+}
+
+// End validateForm

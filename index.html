@@ -58,11 +58,13 @@
           <textarea
             rows="5"
             placeholder="Please , Enter Your Message"
+            id="contact-message"
+            onkeyup="validateMessage()"
           ></textarea>
           <span id="message-error"></span>
         </div>
 
-        <button>Submit</button>
+        <button onclick="return validateForm()">Submit</button>
         <span id="submit-error"></span>
       </form>
 
