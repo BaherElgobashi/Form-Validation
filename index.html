@@ -44,7 +44,12 @@
         <!-- Email Field -->
         <div class="input-group">
           <label for="">EMail ID</label>
-          <input type="email" placeholder="Enter your email" />
+          <input
+            type="email"
+            placeholder="Enter your email"
+            id="contact-email"
+            onkeyup="validateEmail()"
+          />
           <span id="email-error"></span>
         </div>
 

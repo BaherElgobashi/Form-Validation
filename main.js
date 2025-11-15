@@ -21,7 +21,7 @@ function validateName() {
     return false;
   }
   // nameError.innerHTML = '<i class="fas fa-check-circle"></i>';
-  nameError.innerHTML = "Great Work";
+  nameError.innerHTML = "Great Work.";
   nameError.style.color = "green";
 
   return true;
@@ -43,7 +43,7 @@ function validatePhone() {
     phoneError.innerHTML = "Only Digits are allowed.";
     return false;
   } else {
-    phoneError.innerHTML = "Great Work";
+    phoneError.innerHTML = "Great Work.";
     phoneError.style.color = "green";
     return true;
   }
@@ -52,3 +52,22 @@ function validatePhone() {
 // End validatePhone
 
 ////////////////////////////////////////////////////////////////
+
+// Start validateEmail
+
+function validateEmail() {
+  let email = document.getElementById("contact-email").value;
+  if (email.length === 0) {
+    emailError.innerHTML = "Email is Required.";
+    return false;
+  } else if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+    emailError.innerHTML = "Email is Invalid.";
+    return false;
+  } else {
+    emailError.innerHTML = "Great Work.";
+    emailError.style.color = "green";
+    return true;
+  }
+}
+
+// End validateEmail
