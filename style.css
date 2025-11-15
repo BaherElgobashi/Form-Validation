@@ -94,3 +94,7 @@ form button {
   color: red;
   font-size: 14px;
 }
+
+.input-group span i {
+  color: seagreen;
+}
