@@ -99,12 +99,56 @@ form button {
   color: seagreen;
 }
 
-@media (max-width: 1023px) {
+/* @media (max-width: 1023px) {
   .useful-links {
     display: none;
   }
   .container form {
     width: 80%;
     padding: 20px 10px 20px;
+  }
+} */
+
+@media (max-width: 768px) {
+  .useful-links {
+    display: none;
+  }
+  .container form {
+    width: 90%;
+    padding: 25px 15px 25px;
+  }
+  .input-group label {
+    flex-basis: 35%;
+    font-size: 14px;
+  }
+  .input-group input,
+  .input-group textarea {
+    flex-basis: 65%;
+  }
+  .input-group span {
+    right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container form {
+    width: 95%;
+    padding: 20px 10px 20px;
+  }
+  .input-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .input-group label,
+  .input-group input,
+  .input-group textarea {
+    flex-basis: 100%;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .input-group span {
+    position: relative;
+    right: 0;
+    bottom: 0;
   }
 }
