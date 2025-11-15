@@ -30,7 +30,7 @@
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
 }
 
-.fa-paper-plane {
+/* .fa-paper-plane {
   position: absolute;
   top: 0;
   left: 50%;
@@ -40,7 +40,7 @@
   padding: 20px;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
+} */
 
 .input-group {
   display: flex;
@@ -97,4 +97,14 @@ form button {
 
 .input-group span i {
   color: seagreen;
+}
+
+@media (max-width: 1023px) {
+  .useful-links {
+    display: none;
+  }
+  .container form {
+    width: 80%;
+    padding: 20px 10px 20px;
+  }
 }
